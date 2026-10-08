@@ -5,6 +5,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui'
   ],
+  app: {
+  baseURL: '/Portfolio/'
+},
 
   devtools: {
     enabled: false
