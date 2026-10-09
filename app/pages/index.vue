@@ -513,12 +513,13 @@ class="fixed inset-y-0 left-0 z-50 flex w-72 flex-col border-r border-purple-300
         Mes compétences
       </a>
       
-      <a
-       href="/documents/cv-kaylee-chapon.pdf"
-       download="CV-Kaylee-Chapon.pdf"
       
-      class="inline-flex items-center gap-2 rounded-xl border border-purple-300/30 bg-purple-400/10 px-6 py-3 font-semibold text-purple-100 shadow-lg shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-purple-400/20 hover:shadow-lg hover:shadow-purple-500/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-       >
+<a
+  href="/Portfolio/documents/cv-kaylee-chapon.pdf"
+  download="CV-Kaylee-Chapon.pdf"
+  class="inline-flex items-center gap-2 rounded-xl border border-purple-300/30 bg-purple-400/10 px-6 py-3 font-semibold text-purple-100 shadow-lg shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-purple-400/20 hover:shadow-lg hover:shadow-purple-500/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+>
+
        <UIcon name="i-lucide-download" class="size-5" />
       Télécharger mon CV
       </a>
