@@ -11,8 +11,9 @@ useHead({
   }
 })
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const title = 'Kaylee Chapon — Technicienne Informatique de Proximité'
+
+const description = 'Portfolio de Kaylee Chapon, Technicienne Informatique de Proximité en formation, à la recherche d’un stage.'
 
 useSeoMeta({
   title,
