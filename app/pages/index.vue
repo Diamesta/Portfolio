@@ -986,12 +986,11 @@ onMounted(() => {
 
             <template #header>
               <div class="flex items-center gap-3">
-                <div class="rounded-xl bg-primary/10 p-3">
-                  <UIcon
-                    name="i-lucide-monitor"
-                    class="size-6 text-primary"
-                  />
-                </div>
+                <img
+                  src="/images/favicon_PatchWatch.png"
+                  alt="Logo PatchWatch"
+                  class="size-20 object-contain"
+                />
 
                 <div>
                   <h3 class="font-semibold">
