@@ -5,28 +5,28 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui'
   ],
-  app: {
-  baseURL: '/Portfolio/',
-  head: {
-    title: 'Kaylee Chapon — Technicienne Informatique de Proximité',
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/Portfolio/favicon.png'
-      }
-    ],
-    meta: [
-      {
-        name: 'description',
-        content: 'Portfolio de Kaylee Chapon, Technicienne Informatique de Proximité en formation.'
-      }
-    ]
-  }
-},
 
   devtools: {
     enabled: false
+  },
+  app: {
+    baseURL: '/Portfolio/',
+    head: {
+      title: 'Kaylee Chapon — Technicienne Informatique de Proximité',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/Portfolio/favicon.png'
+        }
+      ],
+      meta: [
+        {
+          name: 'description',
+          content: 'Portfolio de Kaylee Chapon, Technicienne Informatique de Proximité en formation.'
+        }
+      ]
+    }
   },
 
   css: ['~/assets/css/main.css'],
