@@ -4,10 +4,14 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/Portfolio/favicon.png'
+    }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'fr'
   }
 })
 
@@ -20,7 +24,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
+  ogImage: 'https://diamesta.github.io/Portfolio/images/portfolio-preview.png',
   twitterCard: 'summary_large_image'
 })
 </script>
