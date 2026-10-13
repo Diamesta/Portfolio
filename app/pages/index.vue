@@ -779,9 +779,150 @@ onMounted(() => {
     >
       <div class="flex w-full flex-1 items-center justify-center">
         <div class="grid w-full gap-4 md:grid-cols-2 md:gap-6">
+          <!-- Portfolio -->
+          <UCard
+            class="order-3 group h-full border border-cyan-300/20 bg-gradient-to-br from-cyan-400/[0.07] via-white/[0.03] to-purple-400/[0.06] shadow-[0_0_18px_rgba(34,211,238,0.05)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)]"
+          >
+            <div class="mb-5 overflow-hidden rounded-xl border border-purple-300/15 bg-[#0c1228] p-4">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="size-2 rounded-full bg-purple-300" />
+
+                  <span class="text-xs font-semibold tracking-wide text-slate-200">
+                    KAYLEE CHAPON
+                  </span>
+                </div>
+
+                <UIcon
+                  name="i-lucide-sparkles"
+                  class="size-5 text-purple-300"
+                />
+              </div>
+
+              <div class="py-6">
+                <p class="text-xs uppercase tracking-[0.25em] text-cyan-300">
+                  Bienvenue dans mon univers
+                </p>
+
+                <div class="mt-3 text-2xl font-black text-white">
+                  Portfolio
+                  <span class="text-purple-300">Nébuleuse.</span>
+                </div>
+
+                <div class="mt-4 flex gap-2">
+                  <span class="h-1.5 w-16 rounded-full bg-purple-400" />
+                  <span class="h-1.5 w-10 rounded-full bg-cyan-300" />
+                  <span class="h-1.5 w-6 rounded-full bg-indigo-400" />
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-400">
+                Aperçu du portfolio terminé et accessible en ligne.
+              </p>
+            </div>
+
+            <template #header>
+              <div class="flex items-center gap-3">
+                <img
+                  src="/favicon.png"
+                  alt="Logo du portfolio"
+                  class="size-20 object-contain"
+                />
+
+                <div>
+                  <h3 class="font-semibold">
+                    Portfolio Nébuleuse
+                  </h3>
+                  <p class="text-sm text-muted">
+                    Nuxt · Vue.js · JavaScript · TypeScript · Tailwind CSS · Nuxt UI · Node.js
+                  </p>
+                </div>
+              </div>
+            </template>
+
+            <p class="text-sm leading-6 text-muted">
+              Mon portfolio personnel, conçu pour présenter mon parcours,
+              mes compétences et mes réalisations dans une interface personnalisée.
+            </p>
+
+            <template #footer>
+              <UBadge
+                color="success"
+                variant="subtle"
+              >
+                En ligne
+              </UBadge>
+            </template>
+          </UCard>
+
+          <!-- VeilleTech -->
+          <UCard
+            class="order-2 group h-full border border-cyan-300/20 bg-gradient-to-br from-cyan-400/[0.07] via-white/[0.03] to-purple-400/[0.06] shadow-[0_0_18px_rgba(34,211,238,0.05)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)]"
+          >
+            <div class="mb-5 overflow-hidden rounded-xl border border-cyan-300/15 bg-[#0c1228] p-4">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="size-2 rounded-full bg-cyan-300" />
+                  <span class="text-xs font-semibold tracking-wide text-slate-200">
+                    VEILLETECH
+                  </span>
+                </div>
+
+                <UIcon
+                  name="i-lucide-radar"
+                  class="size-5 text-cyan-300"
+                />
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 py-5 text-center text-xs text-slate-300 sm:gap-3">
+                <span class="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">Réseaux</span>
+                <span class="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">Systèmes</span>
+                <span class="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">Cybersécurité</span>
+              </div>
+
+              <p class="text-xs text-slate-400">
+                Suivre les évolutions des technologies informatiques.
+              </p>
+            </div>
+
+            <template #header>
+              <div class="flex items-center gap-3">
+                <img
+                  src="/images/favicon_VeilleTech.png"
+                  alt="Logo VeilleTech"
+                  class="size-20 object-contain"
+                />
+
+                <div>
+                  <h3 class="font-semibold">
+                    VeilleTech
+                  </h3>
+                  <p class="text-sm text-muted">
+                    Nuxt · Vue · TypeScript · Nuxt UI · Tailwind CSS · NestJS · SQLite avec TypeORM · RSS Parser · Node.js · REST
+                  </p>
+                </div>
+              </div>
+            </template>
+
+            <p class="text-sm leading-6 text-muted">
+              Un projet de veille technologique personnel, conçu pour me tenir
+              à jour dans le cadre de ma formation de Technicienne Informatique de Proximité (TIP).
+              VeilleTech sera également proposée sous forme d’application pour Android et iOS.
+            </p>
+
+            <template #footer>
+              <UBadge
+                color="info"
+                variant="subtle"
+              >
+                En développement
+              </UBadge>
+            </template>
+          </UCard>
+
           <!-- PatchWatch -->
           <UCard
-            class="group h-full border border-cyan-300/20 bg-gradient-to-br from-cyan-400/[0.07] via-white/[0.03] to-purple-400/[0.06] shadow-[0_8px_35px_rgba(0,0,0,0.35),0_0_30px_rgba(34,211,238,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-[0_10px_45px_rgba(0,0,0,0.4),0_0_35px_rgba(168,85,247,0.18)]"
+            class="order-1 group h-full border border-cyan-300/20 bg-gradient-to-br from-cyan-400/[0.07] via-white/[0.03] to-purple-400/[0.06] shadow-[0_8px_35px_rgba(0,0,0,0.35),0_0_30px_rgba(34,211,238,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-[0_10px_45px_rgba(0,0,0,0.4),0_0_35px_rgba(168,85,247,0.18)]"
           >
             <div class="mb-5 overflow-hidden rounded-xl border border-cyan-300/15 bg-[#0c1228] p-4">
               <div class="flex items-center justify-between gap-3 border-b border-white/10 pb-3">
@@ -858,6 +999,7 @@ onMounted(() => {
                   </h3>
                   <p class="text-sm text-muted">
                     Projet informatique
+                    Nuxt · Vue · TypeScript · Nuxt UI · Tailwind CSS · Vite · NestJS · REST · TypeORM · SQLite · PostgreSQL · Tauri · Rust · RSS
                   </p>
                 </div>
               </div>
@@ -877,91 +1019,8 @@ onMounted(() => {
                   En conception
                 </UBadge>
 
-                <span class="inline-flex items-center gap-2 text-sm text-slate-400">
-                  <UIcon
-                    name="i-lucide-code-2"
-                    class="size-4"
-                  />
-                  Développement en cours
-                </span>
+
               </div>
-            </template>
-          </UCard>
-
-          <!-- Portfolio -->
-          <UCard
-            class="group h-full border border-cyan-300/20 bg-gradient-to-br from-cyan-400/[0.07] via-white/[0.03] to-purple-400/[0.06] shadow-[0_0_18px_rgba(34,211,238,0.05)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)]"
-          >
-            <div class="mb-5 overflow-hidden rounded-xl border border-purple-300/15 bg-[#0c1228] p-4">
-              <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                <div class="flex items-center gap-2">
-                  <span class="size-2 rounded-full bg-purple-300" />
-
-                  <span class="text-xs font-semibold tracking-wide text-slate-200">
-                    KAYLEE CHAPON
-                  </span>
-                </div>
-
-                <UIcon
-                  name="i-lucide-sparkles"
-                  class="size-5 text-purple-300"
-                />
-              </div>
-
-              <div class="py-6">
-                <p class="text-xs uppercase tracking-[0.25em] text-cyan-300">
-                  Bienvenue dans mon univers
-                </p>
-
-                <div class="mt-3 text-2xl font-black text-white">
-                  Portfolio
-                  <span class="text-purple-300">Nébuleuse.</span>
-                </div>
-
-                <div class="mt-4 flex gap-2">
-                  <span class="h-1.5 w-16 rounded-full bg-purple-400" />
-                  <span class="h-1.5 w-10 rounded-full bg-cyan-300" />
-                  <span class="h-1.5 w-6 rounded-full bg-indigo-400" />
-                </div>
-              </div>
-
-              <p class="text-xs text-slate-400">
-                Aperçu du design — portfolio en développement.
-              </p>
-            </div>
-
-            <template #header>
-              <div class="flex items-center gap-3">
-                <div class="rounded-xl bg-primary/10 p-3">
-                  <UIcon
-                    name="i-lucide-sparkles"
-                    class="size-6 text-primary"
-                  />
-                </div>
-
-                <div>
-                  <h3 class="font-semibold">
-                    Portfolio Nébuleuse
-                  </h3>
-                  <p class="text-sm text-muted">
-                    Vue.js · Nuxt · Nuxt UI
-                  </p>
-                </div>
-              </div>
-            </template>
-
-            <p class="text-sm leading-6 text-muted">
-              Mon portfolio personnel, conçu pour présenter mon parcours,
-              mes compétences et mes réalisations dans une interface personnalisée.
-            </p>
-
-            <template #footer>
-              <UBadge
-                color="primary"
-                variant="subtle"
-              >
-                En développement
-              </UBadge>
             </template>
           </UCard>
         </div>
