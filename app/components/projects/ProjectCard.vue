@@ -1,3 +1,4 @@
+```vue
 <script setup lang="ts">
 defineProps<{
   project: {
@@ -7,6 +8,7 @@ defineProps<{
     description: string
     technologies: string
     status: 'success' | 'info'
+    statusColor: 'success' | 'info'
     order?: number
     type: string
     previewTitle?: string
@@ -21,17 +23,19 @@ defineProps<{
 </script>
 
 <template>
-  <UCard>
+  <UCard
+    class="group h-full border border-white/10 bg-white/[0.03] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/30 hover:shadow-[0_0_35px_rgba(168,85,247,0.12)]"
+  >
     <!-- Aperçu Portfolio -->
     <div
       v-if="project.type === 'portfolio'"
-      class="mb-5 overflow-hidden rounded-xl border border-purple-300/15 bg-[#0c1228] p-4"
+      class="mb-4 overflow-hidden rounded-xl border border-purple-300/15 bg-[#0c1228] p-3"
     >
       <div
-        class="flex items-center justify-between border-b border-white/10 pb-3"
+        class="flex items-center justify-between border-b border-white/10 pb-2"
       >
         <div class="flex items-center gap-2">
-          <span class="size-2 rounded-full bg-purple-300" />
+          <span class="size-1.5 rounded-full bg-purple-300" />
 
           <span class="text-xs font-semibold tracking-wide text-slate-200">
             {{ project.previewTitle }}
@@ -40,30 +44,30 @@ defineProps<{
 
         <UIcon
           :name="project.previewIcon!"
-          class="size-5 text-purple-300"
+          class="size-4 text-purple-300"
         />
       </div>
 
-      <div class="py-6">
-        <p class="text-xs uppercase tracking-[0.25em] text-cyan-300">
+      <div class="py-4">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-cyan-300">
           {{ project.previewLabel }}
         </p>
 
-        <div class="mt-3 text-2xl font-black text-white">
+        <div class="mt-2 text-xl font-black text-white">
           {{ project.previewName }}
           <span class="text-purple-300">
             {{ project.previewAccent }}
           </span>
         </div>
 
-        <div class="mt-4 flex gap-2">
-          <span class="h-1.5 w-16 rounded-full bg-purple-400" />
-          <span class="h-1.5 w-10 rounded-full bg-cyan-300" />
-          <span class="h-1.5 w-6 rounded-full bg-indigo-400" />
+        <div class="mt-3 flex gap-1.5">
+          <span class="h-1 w-12 rounded-full bg-purple-400" />
+          <span class="h-1 w-8 rounded-full bg-cyan-300" />
+          <span class="h-1 w-5 rounded-full bg-indigo-400" />
         </div>
       </div>
 
-      <p class="text-xs text-slate-400">
+      <p class="text-[11px] leading-4 text-slate-400">
         {{ project.previewDescription }}
       </p>
     </div>
@@ -71,13 +75,13 @@ defineProps<{
     <!-- Aperçu VeilleTech -->
     <div
       v-else-if="project.type === 'veilleTech'"
-      class="mb-5 overflow-hidden rounded-xl border border-cyan-300/15 bg-[#0c1228] p-4"
+      class="mb-4 overflow-hidden rounded-xl border border-cyan-300/15 bg-[#0c1228] p-3"
     >
       <div
-        class="flex items-center justify-between border-b border-white/10 pb-3"
+        class="flex items-center justify-between border-b border-white/10 pb-2"
       >
         <div class="flex items-center gap-2">
-          <span class="size-2 rounded-full bg-cyan-300" />
+          <span class="size-1.5 rounded-full bg-cyan-300" />
 
           <span class="text-xs font-semibold tracking-wide text-slate-200">
             {{ project.previewTitle }}
@@ -86,23 +90,23 @@ defineProps<{
 
         <UIcon
           :name="project.previewIcon!"
-          class="size-5 text-cyan-300"
+          class="size-4 text-cyan-300"
         />
       </div>
 
       <div
-        class="grid grid-cols-3 gap-2 py-5 text-center text-xs text-slate-300 sm:gap-3"
+        class="grid grid-cols-3 gap-1.5 py-4 text-center text-[11px] text-slate-300"
       >
         <span
           v-for="item in project.previewItems"
           :key="item"
-          class="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3"
+          class="rounded-md border border-white/10 bg-white/[0.04] px-1.5 py-2"
         >
           {{ item }}
         </span>
       </div>
 
-      <p class="text-xs text-slate-400">
+      <p class="text-[11px] leading-4 text-slate-400">
         {{ project.previewDescription }}
       </p>
     </div>
@@ -113,15 +117,15 @@ defineProps<{
         <img
           :src="project.logo"
           :alt="project.logoAlt"
-          class="size-20 object-contain transition-transform duration-300 group-hover:scale-105"
+          class="size-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
         >
 
-        <div>
+        <div class="min-w-0">
           <h3 class="font-semibold text-white">
             {{ project.name }}
           </h3>
 
-          <p class="text-sm text-muted">
+          <p class="text-xs text-muted">
             {{ project.technologies }}
           </p>
         </div>
@@ -129,13 +133,13 @@ defineProps<{
     </template>
 
     <!-- Description -->
-    <p class="text-sm leading-6 text-muted">
+    <p class="text-sm leading-5 text-muted">
       {{ project.description }}
     </p>
 
     <!-- Statut -->
     <template #footer>
-      <div class="flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center justify-between gap-3">
         <UBadge
           :color="project.statusColor"
           variant="subtle"
@@ -146,3 +150,4 @@ defineProps<{
     </template>
   </UCard>
 </template>
+```

@@ -1,26 +1,89 @@
+
+<script setup lang="ts">
+const props = defineProps<{
+  section: 'home' | 'about' | 'journey' | 'skills' | 'projects' | 'contact'
+}>()
+
+const sectionStyles = computed(() => {
+  switch (props.section) {
+    case 'about':
+      return {
+        primary: 'bg-cyan-500/20',
+        secondary: 'bg-purple-500/15',
+        accent: 'bg-fuchsia-500/10',
+        extra: 'bg-cyan-400/10',
+      }
+
+    case 'journey':
+      return {
+        primary: 'bg-violet-500/20',
+        secondary: 'bg-cyan-500/12',
+        accent: 'bg-purple-500/10',
+        extra: 'bg-fuchsia-500/10',
+      }
+
+    case 'skills':
+      return {
+        primary: 'bg-purple-500/20',
+        secondary: 'bg-fuchsia-500/15',
+        accent: 'bg-cyan-500/10',
+        extra: 'bg-violet-500/10',
+      }
+
+    case 'projects':
+      return {
+        primary: 'bg-fuchsia-500/20',
+        secondary: 'bg-cyan-500/15',
+        accent: 'bg-purple-500/10',
+        extra: 'bg-fuchsia-400/10',
+      }
+
+    case 'contact':
+      return {
+        primary: 'bg-cyan-500/20',
+        secondary: 'bg-purple-500/15',
+        accent: 'bg-fuchsia-500/10',
+        extra: 'bg-violet-500/10',
+      }
+
+    default:
+      return {
+        primary: 'bg-purple-600/20',
+        secondary: 'bg-cyan-500/15',
+        accent: 'bg-fuchsia-500/10',
+        extra: 'bg-violet-500/10',
+      }
+  }
+})
+</script>
+
 <template>
   <div
     aria-hidden="true"
     class="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
   >
-    <!-- Halo violet principal -->
+    <!-- Halo principal -->
     <div
-      class="absolute left-1/2 top-[-20%] h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-purple-600/20 blur-[140px]"
+      class="absolute left-1/2 top-[-20%] h-[600px] w-[600px] -translate-x-1/2 rounded-full blur-[140px] transition-colors duration-1000 ease-out"
+      :class="sectionStyles.primary"
     />
 
-    <!-- Halo cyan -->
+    <!-- Halo secondaire -->
     <div
-      class="absolute right-[-10%] top-[20%] h-[500px] w-[500px] rounded-full bg-cyan-500/15 blur-[130px]"
+      class="absolute right-[-10%] top-[20%] h-[500px] w-[500px] rounded-full blur-[130px] transition-colors duration-1000 ease-out"
+      :class="sectionStyles.secondary"
     />
 
     <!-- Halo rose -->
     <div
-      class="absolute bottom-[-15%] left-[10%] h-[500px] w-[500px] rounded-full bg-fuchsia-500/10 blur-[140px]"
+      class="absolute bottom-[-15%] left-[10%] h-[500px] w-[500px] rounded-full blur-[140px] transition-colors duration-1000 ease-out"
+      :class="sectionStyles.accent"
     />
 
-    <!-- Halo violet secondaire -->
+    <!-- Halo supplémentaire -->
     <div
-      class="absolute bottom-[20%] right-[20%] h-[350px] w-[350px] rounded-full bg-violet-500/10 blur-[120px]"
+      class="absolute bottom-[20%] right-[20%] h-[350px] w-[350px] rounded-full blur-[120px] transition-colors duration-1000 ease-out"
+      :class="sectionStyles.extra"
     />
 
     <!-- Texture d'étoiles -->
