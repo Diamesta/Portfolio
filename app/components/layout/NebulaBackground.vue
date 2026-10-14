@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const props = defineProps<{
   section: 'home' | 'about' | 'journey' | 'skills' | 'projects' | 'contact'
@@ -11,7 +10,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-cyan-500/20',
         secondary: 'bg-purple-500/15',
         accent: 'bg-fuchsia-500/10',
-        extra: 'bg-cyan-400/10',
+        extra: 'bg-cyan-400/10'
       }
 
     case 'journey':
@@ -19,7 +18,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-violet-500/20',
         secondary: 'bg-cyan-500/12',
         accent: 'bg-purple-500/10',
-        extra: 'bg-fuchsia-500/10',
+        extra: 'bg-fuchsia-500/10'
       }
 
     case 'skills':
@@ -27,7 +26,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-purple-500/20',
         secondary: 'bg-fuchsia-500/15',
         accent: 'bg-cyan-500/10',
-        extra: 'bg-violet-500/10',
+        extra: 'bg-violet-500/10'
       }
 
     case 'projects':
@@ -35,7 +34,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-fuchsia-500/20',
         secondary: 'bg-cyan-500/15',
         accent: 'bg-purple-500/10',
-        extra: 'bg-fuchsia-400/10',
+        extra: 'bg-fuchsia-400/10'
       }
 
     case 'contact':
@@ -43,7 +42,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-cyan-500/20',
         secondary: 'bg-purple-500/15',
         accent: 'bg-fuchsia-500/10',
-        extra: 'bg-violet-500/10',
+        extra: 'bg-violet-500/10'
       }
 
     default:
@@ -51,7 +50,7 @@ const sectionStyles = computed(() => {
         primary: 'bg-purple-600/20',
         secondary: 'bg-cyan-500/15',
         accent: 'bg-fuchsia-500/10',
-        extra: 'bg-violet-500/10',
+        extra: 'bg-violet-500/10'
       }
   }
 })

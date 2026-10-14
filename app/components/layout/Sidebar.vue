@@ -17,7 +17,7 @@ function scrollToSection(id: string) {
 
   section.scrollIntoView({
     behavior: 'smooth',
-    block: 'start',
+    block: 'start'
   })
 
   emit('update:mobileMenuOpen', false)
@@ -125,7 +125,10 @@ function scrollToSection(id: string) {
     aria-label="Ouvrir le menu"
     @click="emit('update:mobileMenuOpen', true)"
   >
-    <UIcon name="i-lucide-menu" class="h-5 w-5" />
+    <UIcon
+      name="i-lucide-menu"
+      class="h-5 w-5"
+    />
   </button>
 
   <Transition
@@ -170,7 +173,10 @@ function scrollToSection(id: string) {
           aria-label="Fermer le menu"
           @click="emit('update:mobileMenuOpen', false)"
         >
-          <UIcon name="i-lucide-x" class="h-5 w-5" />
+          <UIcon
+            name="i-lucide-x"
+            class="h-5 w-5"
+          />
         </button>
       </div>
 

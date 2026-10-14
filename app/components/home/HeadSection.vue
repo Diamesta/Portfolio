@@ -11,7 +11,7 @@
         <div
           class="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-400/[0.08] px-4 py-2 text-sm text-purple-100 shadow-[0_0_20px_rgba(168,85,247,0.12)] backdrop-blur-sm transition-all duration-300 hover:border-cyan-300/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]"
         >
-          <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+          <span class="h-2 w-2 rounded-full bg-cyan-300" />
           En formation · Disponible pour un stage
         </div>
 

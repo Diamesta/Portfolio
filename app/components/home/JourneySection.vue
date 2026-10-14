@@ -6,7 +6,7 @@
       container: 'flex min-h-svh flex-col justify-center gap-5 py-10 sm:gap-6 sm:py-12',
       header: 'mb-0',
       description: 'mt-1',
-      title: 'bg-gradient-to-r from-purple-300 via-fuchsia-200 to-cyan-300 bg-clip-text text-transparent',
+      title: 'bg-gradient-to-r from-purple-300 via-fuchsia-200 to-cyan-300 bg-clip-text text-transparent'
     }"
     description="Mon évolution vers les métiers de l'informatique."
     class="relative z-10 mx-auto min-h-svh snap-start px-6"

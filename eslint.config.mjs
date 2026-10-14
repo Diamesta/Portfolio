@@ -9,6 +9,7 @@ export default withNuxt(
     settings: {
       'better-tailwindcss': {
         entryPoint: 'app/assets/css/main.css',
+        ignore: ['portfolio-scroll'],
         attributes: [
           ...getDefaultAttributes(),
           ['^v-bind:ui$', [{ match: 'objectValues' }]]

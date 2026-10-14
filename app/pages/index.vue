@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const activeSection = ref('accueil')
 const mobileMenuOpen = ref(false)
@@ -9,7 +8,7 @@ const sections = [
   'parcours',
   'competences',
   'projets',
-  'contact',
+  'contact'
 ]
 
 const nebulaSection = computed(() => {
@@ -42,7 +41,7 @@ function scrollToSection(id: string) {
 
   section.scrollIntoView({
     behavior: 'smooth',
-    block: 'start',
+    block: 'start'
   })
 
   window.setTimeout(() => {
@@ -61,14 +60,24 @@ function handleWheel(event: WheelEvent) {
   const currentIndex = sections.indexOf(activeSection.value)
 
   if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-    event.preventDefault()
-    scrollToSection(sections[currentIndex + 1])
-  }
+  event.preventDefault()
 
-  if (event.deltaY < 0 && currentIndex > 0) {
-    event.preventDefault()
-    scrollToSection(sections[currentIndex - 1])
+  const nextSection = sections[currentIndex + 1]
+
+  if (nextSection) {
+    scrollToSection(nextSection)
   }
+}
+
+if (event.deltaY < 0 && currentIndex > 0) {
+  event.preventDefault()
+
+  const previousSection = sections[currentIndex - 1]
+
+  if (previousSection) {
+    scrollToSection(previousSection)
+  }
+}
 }
 
 onMounted(() => {
@@ -87,14 +96,14 @@ onMounted(() => {
       entries.forEach((entry) => {
         entry.target.classList.toggle(
           'is-visible',
-          entry.isIntersecting,
+          entry.isIntersecting
         )
       })
     },
     {
       root: scrollContainer,
-      threshold: 0.35,
-    },
+      threshold: 0.35
+    }
   )
 
   document
@@ -102,7 +111,7 @@ onMounted(() => {
     .forEach(section => observer?.observe(section))
 
   scrollContainer?.addEventListener('wheel', handleWheel, {
-    passive: false,
+    passive: false
   })
 })
 
