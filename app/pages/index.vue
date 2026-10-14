@@ -60,24 +60,24 @@ function handleWheel(event: WheelEvent) {
   const currentIndex = sections.indexOf(activeSection.value)
 
   if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-  event.preventDefault()
+    event.preventDefault()
 
-  const nextSection = sections[currentIndex + 1]
+    const nextSection = sections[currentIndex + 1]
 
-  if (nextSection) {
-    scrollToSection(nextSection)
+    if (nextSection) {
+      scrollToSection(nextSection)
+    }
   }
-}
 
-if (event.deltaY < 0 && currentIndex > 0) {
-  event.preventDefault()
+  if (event.deltaY < 0 && currentIndex > 0) {
+    event.preventDefault()
 
-  const previousSection = sections[currentIndex - 1]
+    const previousSection = sections[currentIndex - 1]
 
-  if (previousSection) {
-    scrollToSection(previousSection)
+    if (previousSection) {
+      scrollToSection(previousSection)
+    }
   }
-}
 }
 
 onMounted(() => {
