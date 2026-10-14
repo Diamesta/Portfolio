@@ -1,4 +1,3 @@
-```vue
 <script setup lang="ts">
 defineProps<{
   project: {
@@ -115,7 +114,7 @@ defineProps<{
     <template #header>
       <div class="flex items-center gap-3">
         <img
-          :src="project.logo"
+          :src="withBase(project.logo)"
           :alt="project.logoAlt"
           class="size-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
         >
@@ -150,4 +149,3 @@ defineProps<{
     </template>
   </UCard>
 </template>
-```
