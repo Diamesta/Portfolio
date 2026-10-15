@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+
 defineProps<{
   project: {
     name: string
@@ -114,7 +116,7 @@ defineProps<{
     <template #header>
       <div class="flex items-center gap-3">
         <img
-          :src="withBase(project.logo)"
+          :src="`${config.app.baseURL}${project.logo.replace(/^\//, '')}`"
           :alt="project.logoAlt"
           class="size-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
         >
